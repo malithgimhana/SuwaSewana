@@ -1,2 +1,2 @@
-# SuwaSewana
-SuwaSewana - Doctor and Patient Management System
+# SuwaSewana - Doctor and Patient Management System
+
