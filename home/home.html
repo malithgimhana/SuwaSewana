@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuwaSewana - Your Health, Our Priority</title>
+        <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+<link rel="stylesheet" href="../css/header.css">    
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    <header>
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <div class="contact-info">
+                <a href="mailto:info@suwasewana.com" class="contact-item">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>info@suwasewana.com</span>
+                </a>
+                <a href="tel:0112975801" class="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+94 112 975 801</span>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+    </header>
+
+    <!-- Main Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 2L3 8V14C3 21 8 26 15 28C22 26 27 21 27 14V8L15 2Z" fill="#3B82F6" stroke="#3B82F6" stroke-width="2"/>
+                        <path d="M15 10V20M10 15H20" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <span class="logo-text"><a href="home.html"></a><span class="heal">Suwa</span><span class="connect">Sewana</span></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../home/home.html">Home</a></li>
+                    <li><a href="../about/about.html">About Us</a></li>
+                    <li><a href="../service/service.html">Services</a></li>
+                    <li><a href="../doctor/doctor.html">Doctors</a></li>
+                    <li><a href="../appointment/appointment.html">Appointments</a></li>                   
+                    <li><a href="../contact/contact.html">Contacts</a></li>
+                </ul>
+                <a href="../login/login.html">
+                    <button class="login-btn">Login</button>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2>Your <b>Health</b>, Our <b>Priority</b></h2>
+                    <p>We are committed to providing safe, reliable, and patient-centered medical care through a network of highly qualified and experienced doctors. Our platform enables seamless access to professional consultations, evidence-based treatment, and comprehensive healthcare services across a range of specialties. With a focus on clinical excellence, ethical practice, and patient well-being, we strive to deliver healthcare outcomes you can trust.</p>
+                    <div class="hero-buttons">
+                        <a href="../appointment/appointment.html"><button class="btn btn-primary"><h3>Book an Appointment</h3></button></a>
+                        <a href="https://www.youtube.com/watch?v=vveZ505FyrM" target="_blank" rel="noopener noreferrer"><button class="btn btn-secondary"><h3>Watch Our History</h3></button></a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="../img/meddical_team.png" alt="Medical Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Easy Appointment Scheduling</h3>
+                    <br>
+                    <p>Our online appointment scheduling system lets you book visits with your preferred doctor at a time that suits you best. With just a few clicks, you can select a specialist, view available time slots, and confirm your appointment instantly. This feature eliminates the need for phone calls or physical visits to arrange appointments, making healthcare management more convenient and efficient for you.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Secure Health Records</h3>
+                    <br>
+                    <p>We prioritize the safety and confidentiality of your medical information by storing all health records in a highly secure digital system. Advanced encryption and access controls are implemented to protect your data from unauthorized access. Your medical history, test results, and treatment plans are organized and easily accessible to your healthcare providers while maintaining full compliance with privacy regulations. This ensures that your personal health details are safe and managed responsibly.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Instant Communication</h3>
+                    <br>
+                    <p>Our instant communication tool bridges the gap between you and your healthcare team, enabling real-time messaging for questions, updates, or emergency consultations. You can send messages directly to your doctor or medical staff and receive prompt responses, improving the overall patient experience. This feature also allows you to share symptoms or reports quickly, facilitating better diagnosis and timely medical advice without waiting for scheduled visits.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="doctors-grid" id="homeDoctorsGrid"></div>
+    </div>
+
+    <div class="view-all-container">
+        <a href="../doctor/doctor.html">
+            <button class="btn-view-all">
+                View All Doctors 
+                <span class="arrow">→</span>
+            </button>
+        </a>
+        </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <!-- Company Info Section -->
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 2L3 8V14C3 21 8 26 15 28C22 26 27 21 27 14V8L15 2Z" fill="#3B82F6" stroke="#3B82F6" stroke-width="2"/>
+                        <path d="M15 10V20M10 15H20" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <span class="logo-text"><span class="heal">Suwa</span><span class="connect">Sewana</span></span>
+                </div>
+                <p class="footer-description">Connecting you with quality healthcare, anytime, anywhere. Your health is our priority.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com/watch?v=vveZ505FyrM" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- Quick Links Section -->
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="../home/home.html">Home</a></li>
+                    <li><a href="../about/about.html">About Us</a></li>
+                    <li><a href="../service/service.html">Services</a></li>
+                    <li><a href="../doctor/doctor.html">Doctors</a></li>
+                    <li><a href="../appointment/appointment.html">Appointments</a></li>                   
+                    <li><a href="../contact/contact.html">Contact</a></li>
+                </ul>
+            </div>
+<!-- Contact Info Section -->
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <ul class="footer-contact">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>No.123, Moragahahena, Homagama, Sri-Lanka</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <span>+94 112 975 801</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>info@suwasewana.com</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-clock"></i>
+                        <span>24/7 Customer Support</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p class="copyright">&copy; 2026 SuwaSewana. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <span class="separator">|</span>
+                    <a href="#terms">Terms of Service</a>
+                    <span class="separator">|</span>
+                    <a href="#cookies">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </footer>
+    
+    <script src="home.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
+
+
