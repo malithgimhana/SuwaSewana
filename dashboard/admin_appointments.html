@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Appointments</title>
+      <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+<link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <div class="admin-shell">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <h1>SuwaSewana</h1>
+        <p>Administrator Panel</p>
+      </div>
+      <nav class="sidebar-nav">
+        <a class="sidebar-link" href="admin.html">Overview</a>
+        <a class="sidebar-link" href="admin_doctors.html">Doctors</a>
+        <a class="sidebar-link" href="admin_patients.html">Patients</a>
+        <a class="sidebar-link active" href="admin_appointments.html">Appointments</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <h2 class="page-title">Appointment Management</h2>
+          <p class="page-subtitle">Create and review all appointments</p>
+        </div>
+        <button class="btn btn-muted" id="logoutBtn">Logout</button>
+      </header>
+
+      <div id="notice"></div>
+
+      <section class="table-card">
+        <div class="section-head section-head-with-action">
+          <div>
+            <h3>All Appointments</h3>
+            <p>Filter by date and view booked appointments</p>
+          </div>
+          <button class="btn btn-primary" id="addAppointmentBtn" type="button">+ Add Appointment</button>
+        </div>
+
+        <div class="appointment-toolbar">
+          <label for="filterDateInput">Select Date</label>
+          <input id="filterDateInput" type="date">
+          <button class="btn btn-muted" id="clearDateFilterBtn" type="button">Clear</button>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Patient</th>
+                <th>Doctor</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Department</th>
+                <th>Notes</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="appointmentsTbody"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal-backdrop hidden" id="appointmentModal">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h3>Add Appointment</h3>
+        <button type="button" class="btn-close" id="closeAppointmentModal">x</button>
+      </div>
+
+      <form id="appointmentForm" class="doctor-form-grid" novalidate>
+        <div id="appointmentFormMessage" class="form-message hidden form-field-full" role="alert"></div>
+        <div class="form-field">
+          <label for="patientSearchInput">Patient (Type Full Name)</label>
+          <input id="patientSearchInput" type="text" list="patientNameList" placeholder="Start typing patient name..." required>
+          <datalist id="patientNameList"></datalist>
+          <input id="patientIdInput" type="hidden">
+        </div>
+        <div class="form-field">
+          <label for="doctorSelect">Doctor</label>
+          <select id="doctorSelect" required></select>
+        </div>
+        <div class="form-field form-field-full">
+          <label for="dateInput">Date</label>
+          <input id="dateInput" type="date" required>
+        </div>
+        <div class="form-field form-field-full">
+          <label for="scheduleSelect">Available Time</label>
+          <select id="scheduleSelect" required>
+            <option value="">Select available time</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="departmentInput">Department</label>
+          <input id="departmentInput" type="text" placeholder="Ex: Cardiology">
+        </div>
+        <div class="form-field">
+          <label for="notesInput">Notes</label>
+          <input id="notesInput" type="text" placeholder="Ex: Follow-up visit">
+        </div>
+        <div class="form-actions form-field-full">
+          <button type="submit" class="btn btn-primary">Create Appointment</button>
+          <button type="button" class="btn btn-muted" id="cancelAppointmentBtn">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="admin_appointments.js"></script>
+</body>
+</html>
+

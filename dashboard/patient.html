@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Dashboard</title>
+      <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+<link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <div class="admin-shell">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <h1>SuwaSewana</h1>
+        <p>Patient Panel</p>
+      </div>
+      <nav class="sidebar-nav">
+        <a class="sidebar-link active" href="#" data-tab="appointmentsPanel">Appointments</a>
+        <a class="sidebar-link" href="#" data-tab="profilePanel">Profile</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <h2 class="page-title">Patient Dashboard</h2>
+          <p class="page-subtitle" id="welcomeText"></p>
+        </div>
+        <button class="btn btn-muted" id="logoutBtn">Logout</button>
+      </header>
+
+      <div id="notice"></div>
+
+      <section id="appointmentsPanel" class="tab-panel active">
+        <div class="card">
+          <h2>Appointments</h2>
+          <form id="appointmentForm" class="form-grid">
+            <input type="hidden" id="appointmentId">
+            <div class="form-field">
+              <label for="departmentSelect">Department</label>
+              <select id="departmentSelect" required>
+                <option value="">Select department</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="doctorSelect">Doctor</label>
+              <select id="doctorSelect" required>
+                <option value="">Select doctor</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="dateSelect">Available Date</label>
+              <select id="dateSelect" required>
+                <option value="">Select available date</option>
+              </select>
+            </div>
+            <div class="form-field full">
+              <label for="scheduleSelect">Available Time</label>
+              <select id="scheduleSelect" required>
+                <option value="">Select available time</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="notesInput">Notes</label>
+              <input id="notesInput" type="text" placeholder="Ex: Follow-up for headache symptoms">
+            </div>
+            <div class="form-field full">
+              <button class="btn btn-primary" type="submit">Save Appointment</button>
+              <button class="btn btn-muted" type="button" id="clearBtn">Clear</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="card">
+          <h2>My Appointments</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Doctor</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="appointmentsTbody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="profilePanel" class="tab-panel">
+        <div class="card">
+          <h2>My Profile</h2>
+          <form id="profileForm" class="form-grid" novalidate>
+            <div id="profileFormMessage" class="form-message hidden full" role="alert"></div>
+            <div class="form-field full profile-photo-wrap">
+              <img id="profilePhotoPreview" src="../img/meddical_team.png" alt="Patient profile photo">
+              <div>
+                <label for="profilePhotoInput">Profile Photo</label>
+                <input id="profilePhotoInput" type="file" accept="image/png,image/jpeg,image/webp">
+                <small>Allowed: JPG, PNG, WEBP up to 5MB</small>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="fullNameInput">Full Name</label>
+              <input id="fullNameInput" type="text" maxlength="30" placeholder="Ex: Nimal Perera" required>
+            </div>
+            <div class="form-field">
+              <label for="usernameInput">Username</label>
+              <input id="usernameInput" type="text" maxlength="10" placeholder="Ex: nimal123" required>
+            </div>
+            <div class="form-field">
+              <label for="emailInput">Email</label>
+              <input id="emailInput" type="email" placeholder="Ex: nimal@gmail.com" required>
+            </div>
+            <div class="form-field">
+              <label for="phoneInput">Phone</label>
+              <input id="phoneInput" type="text" maxlength="10" placeholder="Ex: 0771234567" required>
+            </div>
+            <div class="form-field">
+              <label for="passwordInput">New Password (Optional)</label>
+              <div class="password-field">
+                <input id="passwordInput" type="password" placeholder="Ex: Nimal1234">
+                <button type="button" class="password-toggle-btn" data-target="passwordInput" aria-label="Toggle new password visibility">
+                  <span class="eye-open">👁</span>
+                  <span class="eye-closed hidden">🙈</span>
+                </button>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="confirmPasswordInput">Confirm New Password</label>
+              <div class="password-field">
+                <input id="confirmPasswordInput" type="password" placeholder="Re-enter new password">
+                <button type="button" class="password-toggle-btn" data-target="confirmPasswordInput" aria-label="Toggle confirm new password visibility">
+                  <span class="eye-open">👁</span>
+                  <span class="eye-closed hidden">🙈</span>
+                </button>
+              </div>
+            </div>
+            <div class="form-field full">
+              <button class="btn btn-primary" type="submit">Update Profile</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="patient.js"></script>
+</body>
+</html>
+

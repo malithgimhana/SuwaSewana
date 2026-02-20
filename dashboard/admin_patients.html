@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Patients</title>
+      <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+<link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <div class="admin-shell">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <h1>SuwaSewana</h1>
+        <p>Administrator Panel</p>
+      </div>
+      <nav class="sidebar-nav">
+        <a class="sidebar-link" href="admin.html">Overview</a>
+        <a class="sidebar-link" href="admin_doctors.html">Doctors</a>
+        <a class="sidebar-link active" href="admin_patients.html">Patients</a>
+        <a class="sidebar-link" href="admin_appointments.html">Appointments</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <h2 class="page-title">Patient Management</h2>
+          <p class="page-subtitle">Register patients and view all patient details</p>
+        </div>
+        <button class="btn btn-muted" id="logoutBtn">Logout</button>
+      </header>
+
+      <div id="notice"></div>
+
+      <section class="table-card">
+        <div class="section-head section-head-with-action">
+          <div>
+            <h3>All Patients</h3>
+            <p>Registered patient list</p>
+          </div>
+          <button class="btn btn-primary" id="addPatientBtn" type="button">+ Add Patient</button>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Username</th>
+                <th>Gender</th>
+                <th>Created</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="patientsTbody"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal-backdrop hidden" id="patientModal">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h3 id="patientModalTitle">Add Patient</h3>
+        <button type="button" class="btn-close" id="closePatientModal">x</button>
+      </div>
+      <form id="patientForm" class="doctor-form-grid" novalidate>
+        <div id="patientFormMessage" class="form-message hidden form-field-full" role="alert"></div>
+        <input id="patientIdInput" type="hidden">
+        <div class="form-field form-field-full">
+          <label for="fullNameInput">Full Name *</label>
+          <input id="fullNameInput" type="text" maxlength="30" placeholder="Ex: Nimal Perera" required>
+        </div>
+        <div class="form-field form-field-full">
+          <label for="emailInput">Email Address *</label>
+          <input id="emailInput" type="email" placeholder="Ex: nimal@gmail.com" required>
+        </div>
+        <div class="form-field form-field-full">
+          <label for="phoneInput">Phone Number</label>
+          <input id="phoneInput" type="tel" maxlength="10" pattern="0\d{9}" placeholder="Ex: 0771234567" title="Phone format: starts with 0 and has exactly 10 digits (example: 0771234567)">
+        </div>
+        <div class="form-field form-field-full">
+          <label for="usernameInput">Username *</label>
+          <input id="usernameInput" type="text" maxlength="10" pattern="[A-Za-z0-9]{1,10}" placeholder="Ex: nimal123" required>
+        </div>
+        <div class="form-field form-field-full">
+          <label for="passwordInput" id="passwordLabel">Password *</label>
+          <div class="password-field">
+            <input id="passwordInput" type="password" minlength="8" title="Password must be at least 8 characters and include letters and numbers" placeholder="Ex: Nimal1234" required>
+            <button type="button" class="password-toggle-btn" data-target="passwordInput" aria-label="Toggle password visibility">
+              <span class="eye-open">??</span>
+              <span class="eye-closed hidden">??</span>
+            </button>
+          </div>
+        </div>
+        <div class="form-field form-field-full">
+          <label for="confirmPasswordInput" id="confirmPasswordLabel">Confirm Password *</label>
+          <div class="password-field">
+            <input id="confirmPasswordInput" type="password" placeholder="Re-enter password" required>
+            <button type="button" class="password-toggle-btn" data-target="confirmPasswordInput" aria-label="Toggle confirm password visibility">
+              <span class="eye-open">??</span>
+              <span class="eye-closed hidden">??</span>
+            </button>
+          </div>
+        </div>
+        <div class="form-field form-field-full">
+          <label for="genderInput">Gender</label>
+          <select id="genderInput">
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-field form-field-full checkbox-field" id="termsField">
+          <label>
+            <input type="checkbox" id="termsInput" required>
+            I agree to the Terms and Conditions *
+          </label>
+        </div>
+        <div class="form-actions form-field-full">
+          <button type="submit" class="btn btn-primary" id="savePatientBtn">Register Patient</button>
+          <button type="button" class="btn btn-muted" id="cancelPatientBtn">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="admin_patients.js"></script>
+</body>
+</html>
+

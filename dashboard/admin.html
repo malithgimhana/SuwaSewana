@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+      <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+<link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <div class="admin-shell">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <h1>SuwaSewana</h1>
+        <p>Administrator Panel</p>
+      </div>
+      <nav class="sidebar-nav">
+        <a class="sidebar-link active" href="admin.html">Overview</a>
+        <a class="sidebar-link" href="admin_doctors.html">Doctors</a>
+        <a class="sidebar-link" href="admin_patients.html">Patients</a>
+        <a class="sidebar-link" href="admin_appointments.html">Appointments</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <h2 class="page-title">Administrator Dashboard</h2>
+          <p class="page-subtitle">Overview of doctors, patients, and appointment activity</p>
+        </div>
+        <button class="btn btn-muted" id="logoutBtn">Logout</button>
+      </header>
+
+      <div id="notice"></div>
+
+      <section class="overview-grid">
+        <article class="stat-card patients-card">
+          <h3>Patients</h3>
+          <p class="stat-value" id="patientsCount">0</p>
+          <p class="stat-note">Registered patients</p>
+        </article>
+        <article class="stat-card doctors-card">
+          <h3>Doctors</h3>
+          <p class="stat-value" id="doctorsCount">0</p>
+          <p class="stat-note">Registered doctors</p>
+        </article>
+        <article class="stat-card appointments-card">
+          <h3>Appointments</h3>
+          <p class="stat-value" id="appointmentsCount">0</p>
+          <p class="stat-note">Booked appointments</p>
+        </article>
+      </section>
+
+      <section class="chart-card">
+        <div class="section-head">
+          <h3>Weekly Appointment Allocation</h3>
+          <p>Appointments per day of week</p>
+        </div>
+        <div class="chart-wrap">
+          <canvas id="appointmentsChart"></canvas>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
+

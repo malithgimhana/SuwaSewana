@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Dashboard</title>
+      <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+<link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <div class="dashboard-header">
+      <div>
+        <h1 class="dashboard-title">Doctor Dashboard</h1>
+        <p class="dashboard-subtitle" id="welcomeText"></p>
+      </div>
+      <button class="btn btn-muted" id="logoutBtn">Logout</button>
+    </div>
+
+    <div id="notice"></div>
+
+    <div class="card doctor-profile">
+      <img id="doctorPhoto" src="../img/meddical_team.png" alt="Doctor profile">
+      <div>
+        <h2 id="doctorName">Doctor Profile</h2>
+        <p id="doctorSpecialty">Specialty not set</p>
+        <p><strong>Username:</strong> <span id="doctorUsername">-</span></p>
+        <p><strong>Password:</strong> <span id="doctorPassword">Hidden for security</span></p>
+        <p><strong>Email:</strong> <span id="doctorEmail">-</span></p>
+        <p><strong>Phone:</strong> <span id="doctorPhone">-</span></p>
+        <p><strong>Gender:</strong> <span id="doctorGender">-</span></p>
+        <p><strong>NIC:</strong> <span id="doctorNic">-</span></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Update Profile</h2>
+      <form id="doctorProfileForm" class="form-grid" novalidate>
+        <div id="doctorProfileMessage" class="form-message hidden form-field full" role="alert"></div>
+        <div class="form-field">
+          <label for="profilePhotoInput">Profile Photo</label>
+          <input id="profilePhotoInput" type="file" accept="image/png,image/jpeg,image/webp">
+          <small>Allowed: JPG, PNG, WEBP up to 5MB</small>
+        </div>
+        <div class="form-field full">
+          <button class="btn btn-primary" type="submit">Save Profile Photo</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="card">
+      <h2>Channeling Time</h2>
+      <form id="scheduleForm" class="form-grid">
+        <input type="hidden" id="scheduleId">
+        <div class="form-field">
+          <label for="dateInput">Date</label>
+          <input id="dateInput" type="date" required>
+        </div>
+        <div class="form-field">
+          <label for="startTimeInput">Start Time</label>
+          <input id="startTimeInput" type="time" required>
+        </div>
+        <div class="form-field">
+          <label for="endTimeInput">End Time</label>
+          <input id="endTimeInput" type="time" required>
+        </div>
+        <div class="form-field full">
+          <button class="btn btn-primary" type="submit">Save Time Slot</button>
+          <button class="btn btn-muted" type="button" id="clearBtn">Clear</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="card">
+      <h2>My Channeling Times</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Department</th>
+            <th>Available</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="schedulesTbody"></tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>My Appointments</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Patient</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Status</th>
+            <th>Update</th>
+          </tr>
+        </thead>
+        <tbody id="appointmentsTbody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="doctor.js"></script>
+</body>
+</html>
+
