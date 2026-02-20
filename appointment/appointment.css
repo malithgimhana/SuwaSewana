@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* PAGE HEADER */
+.page-header {
+    background: linear-gradient(135deg, #2563eb 0%, #10B981 100%);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.breadcrumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.breadcrumb a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.9;
+    transition: opacity 0.3s;
+}
+
+.breadcrumb a:hover {
+    opacity: 1;
+}
+
+.breadcrumb span {
+    opacity: 0.7;
+}
+
+/* Wrapper */
+.appointment-wrapper {
+  max-width: 740px;
+  margin: auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 50px 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ---- Header ---- */
+.appointment-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.appointment-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 12px;
+}
+
+.appointment-header p {
+  font-size: 0.95rem;
+  color: #666;
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ---- Steps ---- */
+.steps {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 160px;
+}
+
+.step-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #10B981;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  flex-shrink: 0;
+}
+
+.step h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 6px;
+}
+
+.step p {
+  font-size: 0.82rem;
+  color: #777;
+  line-height: 1.5;
+}
+
+/* Divider line between steps */
+.step-divider {
+  flex-shrink: 0;
+  width: 50px;
+  height: 2px;
+  background-color: #d1d5db;
+  margin-top: 29px; /* aligns with center of icon */
+  align-self: flex-start;
+}
+
+/* ---- Form ---- */
+.appointment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.form-row .form-input,
+.form-row .form-select {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Inputs */
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #333;
+  background-color: #ffffff;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #aaa;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: #10B981;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* Select dropdown arrow styling */
+.form-select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='%23666'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.form-select:valid {
+  color: #333;
+}
+
+/* Textarea */
+.form-textarea {
+  min-height: 110px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+/* ---- Book Button ---- */
+.btn-book {
+  width: 100%;
+  padding: 16px;
+  background-color: #10B981;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  margin-top: 6px;
+}
+
+.btn-book:hover {
+  background-color: #059669;
+}
+
+.btn-book:active {
+  transform: scale(0.99);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 560px) {
+  .appointment-wrapper {
+    padding: 30px 20px;
+  }
+
+  .appointment-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .step-divider {
+    display: none;
+  }
+
+  .steps {
+    gap: 20px;
+  }
+}
