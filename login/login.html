@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+        <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+<link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome Back</h2>
+        
+        <div class="success-message" id="successMessage">
+            Login successful!
+        </div>
+        
+        <div class="error-message" id="errorMessage">
+            Invalid username or password
+        </div>
+
+        <form id="loginForm" novalidate>
+            <div class="form-group">
+                <label for="username">Username or Email</label>
+                <input type="text" id="username" name="username" placeholder="Ex: nimal123 or nimal@gmail.com" required>
+                <span class="error">Please enter your username or email</span>
+            </div>
+
+            <div class="form-group password-toggle">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <button type="button" class="toggle-btn" onclick="togglePassword()">
+                    <svg class="eye-icon open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 5C5.63636 5 1 12 1 12c0 0 4.63636 7 11 7s11-7 11-7c0 0-4.63636-7-11-7z"></path>
+                        <circle cx="12" cy="12" r="4"></circle>
+                    </svg>
+                    <svg class="eye-icon closed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+                        <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a4 4 0 1 1-5.66-5.66"></path>
+                        <line x1="1" y1="1" x2="23" y2="23"></line>
+                    </svg>
+                </button>
+                <span class="error">Please enter your password</span>
+            </div>
+
+            <div class="remember-forgot">
+                <div class="remember-me">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Remember me</label>
+                </div>
+                <a href="#" class="forgot-password">Forgot Password?</a>
+            </div>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <div class="divider">
+            <span>OR</span>
+        </div>
+
+        <div class="register-link">
+            Don't have an account? <a href="../registration/registration.html">Register here</a>
+        </div>
+    </div>
+
+    <!-- Forgot Password Modal -->
+    <div id="forgotPasswordModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeForgotPasswordModal()">&times;</button>
+            <p class="modal-message">Forgot your password? Please call <strong>0115848000</strong> to change your password</p>
+            <button class="modal-btn" onclick="closeForgotPasswordModal()">OK</button>
+        </div>
+    </div>
+
+    <script src="login.js"></script>    
+</body>
+</html>
+
