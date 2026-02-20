@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+        <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+<link rel="stylesheet" href="registration.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Create Account</h2>
+        <div class="success-message" id="successMessage">
+            Registration successful!
+        </div>
+        <form id="registrationForm" novalidate>
+            <div class="form-group">
+                <label for="fullName">Full Name *</label>
+                <input type="text" id="fullName" name="fullName" maxlength="30" placeholder="Ex: Nimal Perera" required>
+                <span class="error">Please enter your full name</span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="Ex: nimal@gmail.com" required>
+                <span class="error">Please enter a valid email address</span>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" maxlength="10" pattern="0\d{9}" placeholder="Ex: 0771234567">
+                <span class="error">Please enter a valid phone number</span>
+            </div>
+
+            <div class="form-group">
+                <label for="username">Username *</label>
+                <input type="text" id="username" name="username" maxlength="10" pattern="[A-Za-z0-9]{1,10}" placeholder="Ex: nimal123" required>
+                <span class="error">Username must be up to 10 letters/numbers only</span>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password *</label>
+                <div class="password-field">
+                    <input type="password" id="password" name="password" minlength="8" maxlength="8" pattern="[A-Za-z0-9]{8}" title="Password must be exactly 8 characters, letters and numbers only" placeholder="Ex: Nimal1234" required>
+                    <button type="button" class="password-toggle-btn" data-target="password" aria-label="Show password">
+                        <span class="eye-open">&#128065;</span>
+                        <span class="eye-closed hidden">&#128584;</span>
+                    </button>
+                </div>
+                <span class="error">Password must be exactly 8 characters, letters and numbers only</span>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password *</label>
+                <div class="password-field">
+                    <input type="password" id="confirmPassword" name="confirmPassword" maxlength="8" pattern="[A-Za-z0-9]{8}" title="Password must be exactly 8 characters, letters and numbers only" placeholder="Re-enter password" required>
+                    <button type="button" class="password-toggle-btn" data-target="confirmPassword" aria-label="Show confirm password">
+                        <span class="eye-open">&#128065;</span>
+                        <span class="eye-closed hidden">&#128584;</span>
+                    </button>
+                </div>
+                <span class="error">Passwords do not match</span>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender">
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the Terms and Conditions *</label>
+            </div>
+            <div class="form-group">
+                <span class="error" id="termsError">You must agree to the terms</span>
+            </div>
+
+            <button type="submit">Register</button>
+        </form>
+
+        <div class="login-link">
+            Already have an account? <a href="../login/login.html">Login here</a>
+        </div>
+    </div>
+    <script src="registration.js"></script>
+</body>
+</html>
+
