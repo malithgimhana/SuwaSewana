@@ -1,34 +1,133 @@
-# SuwaSewana - Doctor and Patient Management System
+#SuwaSewana - Doctor and Patient Management System
 
 <img src="img/Github Description voer phot.png" alt="Cover image" width="100%" title="Cover photo">
 
 
-<h1 align="center">SuwaSewana</h1>
-<h3 align="center">Doctor & Patient Management System</h3>
-
 <p align="center">
-A modern web-based healthcare management system designed to streamline clinic workflows with secure role-based dashboards for Admin, Doctor, and Patient users.
+SuwaSewana is a web-based Doctor and Patient Management System developed to streamline clinic and small hospital operations. The system provides a centralized platform to manage doctors, patients, and appointments efficiently while reducing manual paperwork.
+
+This project was developed as a group assignment for our Web Application Development module.
 </p>
 
-## 🚀 Features
 
-- 🔐 Secure Authentication with backend validation
-- 👨‍⚕️ Doctor Management System
-- 🧑‍🤝‍🧑 Patient Management System
-- 📅 Appointment Scheduling
-- 📊 Role-Based Dashboards (Admin / Doctor / Patient)
-- 👤 Profile Management
-- 🛡️ Secure Password Handling
+
+## Project Overview
+
+SuwaSewana digitalizes healthcare management by allowing administrators, doctors, and patients to interact through a secure and user-friendly web application.
+
+The system helps:
+
+* Manage doctor and patient records
+* Schedule and track appointments
+* Store data securely in a structured database
+* Users to send inquiries via contact forms
+
+The system replaces manual paperwork with a secure, structured, and easy-to-use web application.
+
+
+
+## Features
+
+###  Admin Panel
+
+* Secure login authentication
+* Add / Update / Delete doctors
+* Add / Update / Delete patients
+* Manage appointments
+* View system records
+
+### Doctor Panel
+
+* Secure login
+* View scheduled appointments
+* Access patient details
+* Update medical information
+
+### Patient Panel
+
+* Register account
+* Book appointments
+* View appointment history
+* Update personal details
+
+
+
+##  Technologies Used
+
+| Technology | Purpose       |
+| ---------- | ------------- |
+| HTML5      | Structure     |
+| CSS3       | Styling       |
+| PHP        | Backend Logic |
+| MySQL      | Database      |
+| XAMPP      | Local Server  |
+
+
+
+##  Database Structure
+
+Main Tables:
+
+* `user`
+* `schedules`
+* `appointments`
+* `contant`
+
+The system uses relational database design with foreign key relationships between patients, doctors, and appointments.
+
+
+
+## Installation Guide
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/your-username/suwasewana.git
+```
+
+2. Move the project folder to:
+
+```
+xampp/htdocs/
+```
+
+3. Import the database file (`suwasewana.sql`) into phpMyAdmin.
+
+4. Start Apache and MySQL using XAMPP.
+
+5. Open in browser:
+
+```
+http://localhost/suwasewana/
+```
+
+
+
+## Future Improvements
+
+* Password encryption (bcrypt)
+* Email/SMS appointment notifications
+* Online payment integration
+* Prescription management module
+* Deploy to live hosting server
+
+
+
+## Team Members
+
+* Member 1 – Frontend Development
+* Member 2 – Backend Development
+* Member 3 – Database Design
+* Member 4 – Appointment Module
+* Member 5 – Testing & Documentation
+
+
+
+##License
+
+This project is developed for educational purposes only.
 
 ---
-
-## 🛠️ Tech Stack
-
-- PHP
-- JavaScript
-- MySQL
-- HTML5
-- CSS3
 
 <p align="center">
   <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white">
@@ -37,4 +136,3 @@ A modern web-based healthcare management system designed to streamline clinic wo
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
   <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
 </p>
-
