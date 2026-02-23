@@ -1,4 +1,4 @@
-#SuwaSewana - Doctor and Patient Management System
+<h1>SuwaSewana - Doctor and Patient Management System</h1>
 
 <img src="img/Github Description voer phot.png" alt="Cover image" width="100%" title="Cover photo">
 
@@ -100,7 +100,12 @@ xampp/htdocs/
 ```
 http://localhost/suwasewana/
 ```
+<u>Administration Authentication</u>
 
+<ul>
+  <li> Username : admin</li>
+  <li>Password :  admin</li>
+</ul>
 
 
 ## Future Improvements
@@ -115,11 +120,11 @@ http://localhost/suwasewana/
 
 ## Team Members
 
-* Member 1 – Frontend Development
-* Member 2 – Backend Development
-* Member 3 – Database Design
-* Member 4 – Appointment Module
-* Member 5 – Testing & Documentation
+* pdmgimhana – Frontend Development
+* sashansamal – Backend Development
+* ipjrathnayake – Database Design
+* hhkhdilhara – Appointment Module
+* rmmmlrathnayaka – Testing & Documentation
 
 
 
