@@ -124,7 +124,7 @@ http://localhost/suwasewana/
 * sashansamal – Backend Development
 * ipjrathnayake – Database Design
 * hhkhdilhara – Appointment Module
-* rmmmlrathnayaka – Testing & Documentation
+* rmmlrathnayaka – Testing & Documentation
 
 
 
